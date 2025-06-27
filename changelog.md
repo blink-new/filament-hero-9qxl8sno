@@ -1,0 +1,57 @@
+## [Unreleased]
+
+### Added
+- **L2. Authentication UI Components**
+  - Created Login, Sign Up, and Password Reset pages.
+  - Built corresponding forms with a dark theme and orange accents.
+  - Styled forms with proper validation states and transitions.
+  - Ensured accessibility attributes are in place.
+- **L3. Dashboard Components**
+  - Implemented Metrics Cards Grid with mock data.
+  - Created Recent Activity Feed with mock data.
+  - Developed Material Distribution Chart using Recharts with mock data.
+  - Built Low Stock Alerts section with mock data.
+  - Ensured accessibility attributes are in place.
+  - Integrated all dashboard components into `Dashboard.tsx`.
+- **L4. Filament Inventory Grid/List**
+  - Implemented Inventory Toolbar with search, filter placeholders, and view toggle.
+  - Created Filament Grid view with mock data and basic actions.
+  - Developed Filament List view with mock data and basic actions.
+- **L5. Add/Edit Filament Form**
+  - Created `AddFilamentPage.tsx` and `EditFilamentPage.tsx`.
+  - Developed `FilamentForm.tsx` with comprehensive input fields, photo upload, and basic validation.
+  - Integrated `react-hook-form`, `zod`, `react-day-picker`, and `date-fns`.
+- **L6. 2D Barcode Generator Interface**
+  - Installed `react-qr-code` library.
+  - Created `BarcodeGenerator.tsx` for single barcode generation.
+  - Created `BulkBarcodeGenerator.tsx` for generating multiple barcodes.
+  - Created `BarcodeGallery.tsx` for displaying generated barcodes.
+  - Integrated all barcode components into `BarcodesPage.tsx` using tabs.
+  - Added routing for `/barcodes` in `App.tsx`.
+  - Added '2D Barcodes' link to `Sidebar.tsx`.
+- **L7. Settings & Profile Interface**
+  - Created `SettingsPage.tsx` with tabbed navigation.
+  - Implemented `ProfileSettings.tsx` for avatar, name, email, password, and account deletion.
+  - Developed `PreferencesSettings.tsx` for units, low stock threshold, default view, and notifications.
+  - Created `SubscriptionSettings.tsx` for current plan display, usage metrics, upgrade/downgrade buttons, and billing history.
+  - Created `DataManagementSettings.tsx` for data export, import, backup, and restore.
+- **L8. Printer Management Interface**
+  - Created `PrinterGrid.tsx` to display printers.
+  - Implemented `AddEditPrinterModal.tsx` for adding and editing printers.
+  - Developed `FilamentAssignmentModal.tsx` for assigning filaments to printers.
+  - Created `PrinterDashboard.tsx` for printer overview and usage statistics.
+  - Integrated all printer management components into `PrinterPage.tsx` using tabs.
+- **L9. Mobile Optimization Components**
+  - Increased touch target size for view toggle buttons in `InventoryToolbar.tsx`.
+  - Increased touch target size for action buttons in `FilamentGrid.tsx` and `FilamentList.tsx`.
+  - Created `MobileNav.tsx` for a mobile-specific bottom navigation bar.
+  - Integrated `MobileNav.tsx` into `Layout.tsx` and made the main `Sidebar` hidden on mobile.
+
+### Fixed
+- Resolved `Uncaught ReferenceError: Printer is not defined` by importing `Printer` icon in `Sidebar.tsx`.
+- Created missing `MetricsCard.tsx` component.
+- Created missing `FilamentForm.tsx` component.
+- Created missing `PrinterPage.tsx` component.
+- Updated `App.tsx` routing to include `AddFilamentPage` and `PrinterPage`.
+- Resolved `React does not recognize the %s prop... indicatorColor` warning by modifying `src/components/ui/progress.tsx` to accept `indicatorClassName`.
+- Recreated missing `BulkBarcodeGenerator.tsx` component.
