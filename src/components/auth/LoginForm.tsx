@@ -6,7 +6,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '@/lib/supabaseClient';
 import { useToast } from '@/hooks/use-toast';
-import { Google } from 'lucide-react';
+import { GoogleIcon } from '@/components/ui/google-icon';
 
 interface LoginFormProps {
   onSuccess: () => void;
@@ -111,7 +111,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSuccess }) => {
         onClick={handleGoogleLogin}
         disabled={loading}
       >
-        <Google className="mr-2 h-4 w-4" /> {loading ? 'Signing in...' : 'Sign in with Google'}
+        <GoogleIcon className="mr-2 h-4 w-4" /> {loading ? 'Signing in...' : 'Sign in with Google'}
       </Button>
     </form>
   );
